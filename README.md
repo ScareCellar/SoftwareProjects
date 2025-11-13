@@ -1,77 +1,93 @@
-# 🌾 **Bud Buds**  
-*A 2D City Builder × Farming Simulator Hybrid*  
+<div align="center">
 
-![Unity](https://img.shields.io/badge/Engine-Unity-blue?style=flat-square&logo=unity)
-![C#](https://img.shields.io/badge/Language-C%23-239120?style=flat-square&logo=csharp)
-![Trello](https://img.shields.io/badge/Management-Trello-0052CC?style=flat-square&logo=trello)
-![GitHub](https://img.shields.io/badge/Version%20Control-GitHub-181717?style=flat-square&logo=github)
+# 🌱 <span style="color:#7CFC00;">Bud Buds</span>
+
+*A cozy 2D city builder × farming simulator hybrid where players grow crops, expand land, and manage multiple farms across a vibrant world.*
 
 ---
 
-## 🌱 **Overview**
-**Bud Buds** is a relaxing **2D city builder–farming simulator hybrid** where players can purchase and manage multiple plots of land across a large map.  
-Players customize their farms, grow crops, trade in markets, and expand their agricultural empire through upgrades and automation.
+![Unity](https://img.shields.io/badge/Engine-Unity-000000?style=for-the-badge&logo=unity)
+![C#](https://img.shields.io/badge/Language-C%23-239120?style=for-the-badge&logo=csharp)
+![Trello](https://img.shields.io/badge/Management-Trello-0052CC?style=for-the-badge&logo=trello)
+![GitHub](https://img.shields.io/badge/Version_Control-GitHub-181717?style=for-the-badge&logo=github)
+![Status](https://img.shields.io/badge/Status-In_Progress-32CD32?style=for-the-badge)
+![License](https://img.shields.io/badge/License-Academic_Project-9ACD32?style=for-the-badge)
 
 ---
 
-## 🎯 **Vision**
-To combine **cozy farming gameplay** with **strategic management**.  
-Players decide *what* to grow, *how* to upgrade, and *when* to trade — crafting their own path to agricultural success.
+</div>
+
+<h2 style="color:#32CD32;">🌿 Vision</h2>
+
+The goal of <b>Bud Buds</b> is to combine relaxing farming gameplay with strategic management.  
+Players decide what to grow, how to upgrade, and when to trade — creating their own path to success.
 
 ---
 
-## 🌾 **Core Features**
-- 🌱 **Crop Growth** – Animated crop stages or sprite changes as plants mature.  
-- 🌾 **Seed Drops** – Harvested crops drop seeds for replanting or trade.  
-- 🏡 **Farm Upgrades** – Unlock helpers, better tools, or enhanced plots.  
-- 💰 **Market System** – Buy and sell crops for profit.  
-- ☀️ **Day/Night Cycle** – Immersive time progression for gameplay pacing.  
-- 🗺️ **World Map** – Purchase and manage multiple farm plots.  
-- 🔊 **Sound Effects** – Audio feedback for player actions.
+<details open>
+<summary><h3 style="color:#ADFF2F;">🌾 Major Features</h3></summary>
+
+- 🌱 **Crop Growth** – Animated crop stages or sprite changes as plants mature  
+- 🌾 **Seed Drops** – Harvested crops drop seeds for replanting or trade  
+- 🏡 **Farm Upgrades** – Unlock NPC helpers, new tools, and enhanced plots  
+- 💰 **Market System** – Buy and sell crops for profit  
+- ☀️ **Day/Night Cycle** – Immersive time progression and pacing  
+- 🗺️ **World Map** – Purchase and manage multiple farm plots  
+- 🔊 **Sound Effects** – Feedback and immersion for player actions  
+
+</details>
 
 ---
 
-## 🚀 **Stretch Goals**
-- 🕵️‍♂️ **Black Market** – Trade rare or “illegal” crops and additives.  
-- 🌸 **More Crops** – Expand crop variety and visuals.  
-- ⚙️ **More Upgrades** – Enhance automation and farm efficiency.  
-- 🌍 **Multiplayer (Photon PUN)** – Cooperative or competitive farming.  
-- 🧑‍🌾 **Rivals** – NPCs that can steal crops or compete for land.  
-- 😴 **Sleeping System** – Rest to progress days faster.  
-- 🍂 **Seasons** – Visual and gameplay changes with time.  
-- 🎵 **Music** – Peaceful background ambiance.
+<details>
+<summary><h3 style="color:#9ACD32;">🚀 Stretch Goals</h3></summary>
+
+- 🕵️ **Black Market** – Trade in rare or “illegal” crops and additives  
+- 🌸 **More Plants** – Expand the variety of crops available  
+- ⚙️ **More Upgrades** – Improve automation and efficiency  
+- 🌍 **Multiplayer (Photon PUN)** – Cooperative or competitive farming  
+- 🧑‍🌾 **Rivals** – NPCs who can steal crops or compete for land  
+- 😴 **Sleeping System** – Rest to progress days  
+- 🍂 **Seasons** – Changing visuals and crop effects  
+- 🎵 **Music** – Peaceful background ambiance  
+
+</details>
 
 ---
 
-## 👥 **Team Members**
+<h2 style="color:#7FFF00;">👥 Team Members</h2>
+
 - Cody Owens  
 - Cameron Troy  
 - Cole Lowery  
 - Noel Martinson  
 
-🌀 *All members rotate roles throughout the project to gain experience in multiple areas of development.*
+<em>All members rotate roles throughout the project to gain experience in multiple areas of development.</em>
 
 ---
 
-## 💬 **Communication**
+<h2 style="color:#ADFF2F;">💬 Communication</h2>
+
 **Platform:** Discord  
-Team discussions, decisions, and updates occur via the group Discord channel.  
+Team discussions, decision-making, and updates are conducted via Discord.  
 
-**Decision-Making Process:**
+**Decision-Making Process:**  
 - Major decisions are made by **team vote and consensus**.  
-- If a member is unavailable, they’ll be contacted through Discord.  
-- If no response is received, the team proceeds with a majority vote.  
-- Disagreements are resolved through discussion and compromise.  
+- If a member is absent, the team will attempt to contact them via Discord.  
+- Lack of response may result in decisions proceeding without their input.  
+- Disagreements are resolved through discussion and compromise.
 
 ---
 
-## ⚠️ **Team Concerns**
-- Unresponsive members will be contacted directly through Discord.  
+<h2 style="color:#9ACD32;">⚠️ Team Concerns</h2>
+
+- Unresponsive members will be contacted through Discord.  
 - Continued inactivity will be reported to the instructor for assistance.  
 
 ---
 
-## 🧰 **Required Technologies**
+<h2 style="color:#32CD32;">🧰 Required Technologies</h2>
+
 | Tool | Purpose |
 |------|----------|
 | **Unity** | Game engine for development |
@@ -82,7 +98,8 @@ Team discussions, decisions, and updates occur via the group Discord channel.
 
 ---
 
-## 💻 **Known Technologies**
+<h2 style="color:#7CFC00;">💻 Known Technologies</h2>
+
 - C#  
 - GitHub  
 - Trello  
@@ -90,6 +107,7 @@ Team discussions, decisions, and updates occur via the group Discord channel.
 
 ---
 
-### 🌻 *“Plant, grow, and thrive — together.”*
-
----
+<div align="center">
+  <h2 style="color:#ADFF2F;">🌻 “Plant, grow, and thrive — together.”</h2>
+  <img src="https://cdn-icons-png.flaticon.com/512/765/765504.png" width="64" alt="Sprout Icon" />
+</div>

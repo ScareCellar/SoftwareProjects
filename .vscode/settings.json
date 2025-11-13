@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "City-Builder-Farming-SIm.slnx"
+    "dotnet.defaultSolution": "SoftwareProjects.slnx"
 }

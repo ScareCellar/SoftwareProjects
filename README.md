@@ -109,5 +109,7 @@ Team discussions, decision-making, and updates are conducted via Discord.
 
 <div align="center">
   <h2 style="color:#ADFF2F;"> “Plant, grow, and thrive — together.”</h2>
-  <img src="https://ibb.co/m5PJZ0KG" alt="Icon" />
+  <a href="https://ibb.co/m5PJZ0KG">
+    <img src="https://i.ibb.co/xqrh9YbD/icon.png" alt="icon" border="0" width="100" />
+  </a>
 </div>

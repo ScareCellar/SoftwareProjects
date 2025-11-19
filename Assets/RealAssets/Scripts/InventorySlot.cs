@@ -2,33 +2,35 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class InventorySlot : MonoBehaviour, IPointerClickHandler
+namespace RealAssets.InventorySystem
 {
-    public Image icon;
-    private Item currentItem;
-
-    public void OnPointerClick(PointerEventData eventData)
+    public class InventorySlot : MonoBehaviour
     {
-        if (currentItem != null)
+        [SerializeField]
+        public Image icon;
+        private Item currentItem;
+
+        public Item CurrentItem { get { return currentItem; } private set { currentItem = value; } }
+
+        private void Start()
         {
-            // We will switch CurrentlySelected Sprite to this item
-            Debug.Log("Clicked on item: " + currentItem.itemName);
+            CurrentItem = null;
         }
-    }
 
-    public void AddItem(Item newItem)
-    {
-        // For picking up items
-        currentItem = newItem;
-        icon.sprite = currentItem.sprite;
-        icon.enabled = true;
-    }
+        public void AddItem(Item newItem)
+        {
+            // For picking up items
+            CurrentItem = newItem;
+            icon.sprite = newItem.sprite;
+            icon.GetComponent<RectTransform>().position = this.GetComponent<RectTransform>().position;
+            icon.enabled = true;
+        }
 
-    public void ClearSlot()
-    {
-        // Might be useful for selling?
-        currentItem = null;
-        icon.sprite = null;
-        icon.enabled = false;
+        public void ClearSlot()
+        {
+            // Might be useful for selling?
+            CurrentItem = null;
+            icon = null;
+        }
     }
 }

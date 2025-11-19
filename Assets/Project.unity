@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06ba99500e9eddd4aab89427840db89c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  icon: {fileID: 0}
+  icon: {fileID: 393300244}
 --- !u!114 &393300243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,7 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06ba99500e9eddd4aab89427840db89c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  icon: {fileID: 0}
+  icon: {fileID: 514152555}
 --- !u!114 &514152554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -574,6 +574,7 @@ GameObject:
   - component: {fileID: 914607877}
   - component: {fileID: 914607879}
   - component: {fileID: 914607878}
+  - component: {fileID: 914607880}
   m_Layer: 5
   m_Name: Currently Selected
   m_TagString: Untagged
@@ -638,6 +639,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914607876}
   m_CullTransparentMesh: 1
+--- !u!114 &914607880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914607876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2bf3578c54209f49be31f3351862cfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &1696835295
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,7 +664,7 @@ GameObject:
   - component: {fileID: 1696835297}
   - component: {fileID: 1696835296}
   m_Layer: 5
-  m_Name: Canvas - Overlay - Background
+  m_Name: Canvas - Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -792,7 +805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06ba99500e9eddd4aab89427840db89c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  icon: {fileID: 0}
+  icon: {fileID: 1717521030}
 --- !u!114 &1717521029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -906,7 +919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06ba99500e9eddd4aab89427840db89c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  icon: {fileID: 0}
+  icon: {fileID: 1802002536}
 --- !u!114 &1802002535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -979,6 +992,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1957525306}
   - component: {fileID: 1957525307}
+  - component: {fileID: 1957525308}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
@@ -1035,6 +1049,27 @@ MonoBehaviour:
   m_Spacing: {x: 10, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &1957525308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957525305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f0dc93a82a82c04dadc55e997e8da5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  slots:
+  - {fileID: 514152553}
+  - {fileID: 1802002534}
+  - {fileID: 2013212485}
+  - {fileID: 2068959436}
+  - {fileID: 393300242}
+  - {fileID: 1717521028}
+  itemsDatabase:
+  - {fileID: 11400000, guid: b7addf7935df4144892a4e86ed3d7c36, type: 2}
 --- !u!1 &2013212483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,7 +1121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06ba99500e9eddd4aab89427840db89c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  icon: {fileID: 0}
+  icon: {fileID: 2013212487}
 --- !u!114 &2013212486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1200,7 +1235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06ba99500e9eddd4aab89427840db89c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  icon: {fileID: 0}
+  icon: {fileID: 2068959438}
 --- !u!114 &2068959437
 MonoBehaviour:
   m_ObjectHideFlags: 0

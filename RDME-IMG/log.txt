@@ -1,0 +1,3 @@
+The purpose of this folder is purely to hold the image for the README.md (the image that we made at the end).
+
+No matter how I messed with it, at most I could get half of it to show or have it huge. So now it will be hardcoded.

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: PlaceHolder
   m_EditorClassIdentifier: Assembly-CSharp::Item
   itemName: Placeholder
-  sprite: {fileID: 7079307960958595592, guid: c2f81fefc84bb3b4c8bc2b82589e5e7b, type: 3}
+  sprite: {fileID: 6342614299768358798, guid: bf6febc827a51894689b1d3e421e9196, type: 3}

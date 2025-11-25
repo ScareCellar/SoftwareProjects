@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+using RealAssets.CurrencySystem;
+
 namespace RealAssets.UpgradeSystem
 {
     public class Upgrade : MonoBehaviour
@@ -17,22 +19,24 @@ namespace RealAssets.UpgradeSystem
             UpdateUpgradeUI();
         }
 
-        internal void AttemptUpgrade()
+        private void AttemptUpgrade()
         {
+            if (!upgradeButton) return;
+            else if (!upgradeButton.interactable) return;
+            
             int upgradeCost = CalculateUpgradeCost();
             Debug.Log($"Attempting to upgrade! Cost: {upgradeCost}");
             // TODO: Implement currency check and upgrade logic
-            // if (CurrencySystem.Singleton.CurrentCurrency >= upgradeCost)
-            // {
-            //     CurrencySystem.Singleton.DeductCurrency(upgradeCost);
-            //     currentUpgradeLevel++;
-            //     ApplyUpgradeEffects();
-            //     UpdateUpgradeUI();
-            // }
-            // else
-            // {
-            //     Debug.Log("Not enough currency to upgrade!");
-            // }
+            if (Currency.Singleton.SpendMoney(upgradeCost))
+            {
+                currentUpgradeLevel++;
+                ApplyUpgradeEffects();
+                UpdateUpgradeUI();
+            }
+            else
+            {
+                Debug.Log("Not enough currency to upgrade!");
+            }
         }
 
         private int CalculateUpgradeCost()

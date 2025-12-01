@@ -11,6 +11,7 @@ namespace RealAssets.UpgradeSystem
         [SerializeField] internal Button upgradeButton;
         [SerializeField] private TMP_Text upgradeCostText;
         [SerializeField] private int baseUpgradeCost = 100;
+        [SerializeField] private string upgradeName = "Upgrade";
         private int currentUpgradeLevel = 0;
 
         private void Awake()
@@ -52,7 +53,7 @@ namespace RealAssets.UpgradeSystem
 
         internal void UpdateUpgradeUI()
         {
-            upgradeCostText.text = $"Upgrade Cost: {CalculateUpgradeCost()}";
+            upgradeCostText.text = $"{upgradeName} Cost: {CalculateUpgradeCost()}";
         }
     }
 }

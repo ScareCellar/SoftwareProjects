@@ -6,16 +6,28 @@ using RealAssets.CurrencySystem;
 
 namespace RealAssets.UpgradeSystem
 {
+    public enum UpgradeScaling
+    {
+        Linear,
+        Exponential,
+        PercentageBased
+    }
+
     public class Upgrade : MonoBehaviour
     {
-        [SerializeField] internal Button upgradeButton;
+        [SerializeField] private Button upgradeButton;
         [SerializeField] private TMP_Text upgradeCostText;
         [SerializeField] private int baseUpgradeCost = 100;
-        [SerializeField] private string upgradeName = "Upgrade";
+        [SerializeField] UpgradeScaling upgradeScaling = UpgradeScaling.Linear;
+        [SerializeField] private float scalingFactor = 1.5f;
+        private string upgradeName;
         private int currentUpgradeLevel = 0;
+        private int curCost;
 
         private void Awake()
         {
+            curCost = baseUpgradeCost;
+            upgradeName = upgradeCostText.text;
             upgradeButton.onClick.AddListener(AttemptUpgrade);
             UpdateUpgradeUI();
         }
@@ -31,6 +43,7 @@ namespace RealAssets.UpgradeSystem
             if (Currency.Singleton.SpendMoney(upgradeCost))
             {
                 currentUpgradeLevel++;
+                curCost = upgradeCost;
                 ApplyUpgradeEffects();
                 UpdateUpgradeUI();
             }
@@ -42,18 +55,28 @@ namespace RealAssets.UpgradeSystem
 
         private int CalculateUpgradeCost()
         {
-            return baseUpgradeCost * (currentUpgradeLevel + 1);
+            switch (upgradeScaling)
+            {
+                case UpgradeScaling.Linear:
+                    return (int)(curCost + scalingFactor);
+                case UpgradeScaling.Exponential:
+                    return (int)(curCost * scalingFactor);
+                case UpgradeScaling.PercentageBased:
+                    return (int)(curCost * (1 + scalingFactor / 100f));
+                default:
+                    return curCost;
+            }
         }
 
         private void ApplyUpgradeEffects()
         {
-            // Implement the actual upgrade effects here
+            // TODO: Implement the actual upgrade effects here
             Debug.Log($"Upgraded to level {currentUpgradeLevel}!");
         }
 
-        internal void UpdateUpgradeUI()
+        private void UpdateUpgradeUI()
         {
-            upgradeCostText.text = $"{upgradeName} Cost: {CalculateUpgradeCost()}";
+            upgradeCostText.text = $"{upgradeName}\nCost: {curCost}\nLevel: {currentUpgradeLevel}";
         }
     }
 }

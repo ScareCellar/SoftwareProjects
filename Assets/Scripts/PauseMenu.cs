@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
             container.SetActive(true);
             Time.timeScale = 0;
         }
+
     }
 
     public void ResumeButton()
@@ -18,4 +19,5 @@ public class PauseMenu : MonoBehaviour
         container.SetActive(false);
         Time.timeScale = 1;
     }
+
 }

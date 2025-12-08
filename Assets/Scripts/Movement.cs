@@ -18,4 +18,6 @@ public class Movement : MonoBehaviour
     {
         rb.MovePosition(rb.position + movement.normalized * moveSpeed * Time.deltaTime);
     }
+
+    internal void PurchaseMovementUpgrade(float speedIncrease) { moveSpeed += speedIncrease; }
 }

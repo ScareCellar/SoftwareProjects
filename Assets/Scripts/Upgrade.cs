@@ -13,12 +13,20 @@ namespace RealAssets.UpgradeSystem
         PercentageBased
     }
 
+    public enum UpgradeType
+    {
+        MovementSpeed,
+        PlantingSpeed,
+        HarvestSpeed
+    }
+
     public class Upgrade : MonoBehaviour
     {
         [SerializeField] private Button upgradeButton;
         [SerializeField] private TMP_Text upgradeCostText;
         [SerializeField] private int baseUpgradeCost = 100;
         [SerializeField] UpgradeScaling upgradeScaling = UpgradeScaling.Linear;
+        [SerializeField] private UpgradeType upgradeType = UpgradeType.MovementSpeed;
         [SerializeField] private float scalingFactor = 1.5f;
         private string upgradeName;
         private int currentUpgradeLevel = 0;
@@ -68,10 +76,28 @@ namespace RealAssets.UpgradeSystem
             }
         }
 
+        [System.Obsolete]
         private void ApplyUpgradeEffects()
         {
-            // TODO: Implement the actual upgrade effects here
-            Debug.Log($"Upgraded to level {currentUpgradeLevel}!");
+            // TODO: Implement specific upgrade effects based on upgradeType
+            switch (upgradeType)
+            {
+                case UpgradeType.MovementSpeed:
+                    Movement movement = FindObjectOfType<Movement>();
+                    if (movement != null)
+                    {
+                        movement.PurchaseMovementUpgrade(0.5f); // Example increment
+                    }
+                    break;
+                case UpgradeType.PlantingSpeed:
+                    // Implement planting speed upgrade logic
+                    break;
+                case UpgradeType.HarvestSpeed:
+                    // Implement harvest speed upgrade logic
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void UpdateUpgradeUI()

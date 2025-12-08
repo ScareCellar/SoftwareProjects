@@ -18,7 +18,7 @@ MonoBehaviour:
   - {fileID: 4506980375917697221, guid: d6ef059f854bba74a8a3b601e09fa681, type: 3}
   - {fileID: 6205673657870114336, guid: d6ef059f854bba74a8a3b601e09fa681, type: 3}
   - {fileID: 6881750370916773083, guid: d6ef059f854bba74a8a3b601e09fa681, type: 3}
-  timeBtwStages: 0
+  timeBtwStages: 10
   buyPrice: 0
   sellPrice: 0
-  icon: {fileID: 0}
+  icon: {fileID: -8344284950600746447, guid: d6ef059f854bba74a8a3b601e09fa681, type: 3}

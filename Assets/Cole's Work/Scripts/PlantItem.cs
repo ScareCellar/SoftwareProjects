@@ -33,7 +33,7 @@ public class PlantItem : MonoBehaviour
     {
         nameTxt.text = plant.plantName;
         priceTxt.text = "$" + plant.buyPrice;
-        icon.sprite = plant.icon;
+       // icon.sprite = plant.icon;
     }
 
 }

@@ -85,16 +85,15 @@ public class PlotManager : MonoBehaviour
         }
     }
 
-    private void OnMouseExit()
-    {
-        plot.color = Color.white;
-    }
+    // private void OnMouseExit()
+    // {
+    //     plot.color = Color.white;
+    // }
 
     private void GivePlayerSeed(PlantObject plant)
     {
         Inventory.Singleton.AddItem(plant);
     }
-
 
     void Harvest()
     {

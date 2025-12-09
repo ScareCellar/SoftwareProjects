@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using RealAssets.CurrencySystem;
+using RealAssets.InventorySystem;
 using UnityEngine;
 
 public class PlotManager : MonoBehaviour
@@ -17,6 +19,7 @@ public class PlotManager : MonoBehaviour
 
     SpriteRenderer plot;
 
+    Currency currency;
 
     PlantObject selectedPlant;
 
@@ -29,6 +32,7 @@ public class PlotManager : MonoBehaviour
         plantCollider = transform.GetChild(0).GetComponent<BoxCollider2D>();
         fm = transform.parent.GetComponent<FarmManager>();
         plot = GetComponent<SpriteRenderer>();
+        currency = Currency.Singleton;
     }
 
     // Update is called once per frame
@@ -53,10 +57,11 @@ public class PlotManager : MonoBehaviour
         {
             if (plantStage == selectedPlant.plantStages.Length - 1 && !fm.isPlanting)
             {
+                GivePlayerSeed(selectedPlant);
                 Harvest();
             }
         }
-        else if(fm.isPlanting && fm.selectPlant.plant.buyPrice <= fm.money)
+        else if(fm.isPlanting)
         {
             Plant(fm.selectPlant.plant);
         }
@@ -67,7 +72,7 @@ public class PlotManager : MonoBehaviour
     {
         if (fm.isPlanting)
         {
-            if(isPlanted || fm.selectPlant.plant.buyPrice > fm.money)
+            if(isPlanted || Inventory.CurrentlySelectedSlot.CurrentItem == null)
             {
                 //can't buy
                 plot.color = unavailableColor;
@@ -85,12 +90,17 @@ public class PlotManager : MonoBehaviour
         plot.color = Color.white;
     }
 
+    private void GivePlayerSeed(PlantObject plant)
+    {
+        Inventory.Singleton.AddItem(plant);
+    }
+
 
     void Harvest()
     {
         isPlanted = false;
         plant.gameObject.SetActive(false);
-        fm.Transaction(selectedPlant.sellPrice);
+        //fm.Transaction(selectedPlant.sellPrice); Transaction should be done with Market
     }
 
     void Plant(PlantObject newPlant)
@@ -98,7 +108,11 @@ public class PlotManager : MonoBehaviour
         selectedPlant = newPlant;
         isPlanted = true;
 
-        fm.Transaction(-selectedPlant.buyPrice);
+        // fm.Transaction(-selectedPlant.buyPrice);
+        // Should be done by buying seeds from market; aka this needs to be connected to Inventory
+
+        // This line clears the currently selected inventory slot after planting
+        Inventory.CurrentlySelectedSlot.ClearSlot();
 
         plantStage = 0;
         UpdatePlant();

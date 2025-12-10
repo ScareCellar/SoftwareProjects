@@ -8,13 +8,10 @@ public class PopupManager : MonoBehaviour
     public GameObject popupUIPrefab;
     public Canvas parentCanvas;
     public Tilemap targetTilemap;
-
     [Header("Allowed Sprites")]
-    public Sprite[] allowedSprites; // Add multiple sprites here
-
+    public Sprite[] allowedSprites; 
     [Header("Popup Settings")]
     public Vector2 popupOffset = new Vector2(150f, 0f);
-
     private GameObject activePopup;
 
     void Update()
@@ -26,7 +23,6 @@ public class PopupManager : MonoBehaviour
 
             TileBase clickedTile = targetTilemap.GetTile(cellPosition);
 
-            // Only show popup if tile sprite matches
             if (clickedTile is Tile tile && IsAllowedSprite(tile.sprite))
             {
                 ShowPopupAtCell(cellPosition);

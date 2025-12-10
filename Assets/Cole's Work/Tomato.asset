@@ -9,16 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e10a8052adf4b214f99545035f1904ce, type: 3}
+  m_Script: {fileID: 11500000, guid: f3b920eeac24d9b458ff90d59b292394, type: 3}
   m_Name: Tomato
   m_EditorClassIdentifier: Assembly-CSharp::PlantObject
   plantName: 
-  plantStages:
-  - {fileID: -3780498461408796120, guid: 510e9d5de3fe9c54eba94993d9148983, type: 3}
-  - {fileID: -5827874292771562073, guid: 510e9d5de3fe9c54eba94993d9148983, type: 3}
-  - {fileID: 2402415582554515247, guid: 510e9d5de3fe9c54eba94993d9148983, type: 3}
-  - {fileID: 8304950708062100032, guid: 510e9d5de3fe9c54eba94993d9148983, type: 3}
-  timeBtwStages: 30
-  buyPrice: 60
-  sellPrice: 80
-  icon: {fileID: -1322868838983756743, guid: 510e9d5de3fe9c54eba94993d9148983, type: 3}
+  plantStages: []
+  timeBtwStages: 0
+  buyPrice: 0
+  sellPrice: 0
+  icon: {fileID: 0}

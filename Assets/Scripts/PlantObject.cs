@@ -12,6 +12,11 @@ public class PlantObject : ScriptableObject
     public int buyPrice;
     public int sellPrice;
     public Sprite icon;
-
+    [SerializeField] public PlantType plantType = PlantType.Seed;
     
+    public enum PlantType
+    {
+        Seed,
+        Crop
+    }
 }

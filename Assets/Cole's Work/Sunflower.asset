@@ -20,5 +20,5 @@ MonoBehaviour:
   - {fileID: 6274847180039180657, guid: 510e9d5de3fe9c54eba94993d9148983, type: 3}
   timeBtwStages: 20
   buyPrice: 40
-  sellPrice: 60
+  sellPrice: 50
   icon: {fileID: 3910405501714380444, guid: 510e9d5de3fe9c54eba94993d9148983, type: 3}

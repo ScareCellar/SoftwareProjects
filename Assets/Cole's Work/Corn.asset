@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c43fcc5a83970649b21fc78ca0984f6, type: 3}
   m_Name: Corn
   m_EditorClassIdentifier: Assembly-CSharp::PlantObject
-  plant: {fileID: 0}
-  nameTxt: {fileID: 0}
-  priceTxt: {fileID: 0}
-  icon: {fileID: 0}
-  btnImage: {fileID: 0}
-  btnTxt: {fileID: 0}
+  plantName: 
+  plantStages:
+  - {fileID: -2243732589849547616, guid: 510e9d5de3fe9c54eba94993d9148983, type: 3}
+  - {fileID: 4506980375917697221, guid: 510e9d5de3fe9c54eba94993d9148983, type: 3}
+  - {fileID: 6205673657870114336, guid: 510e9d5de3fe9c54eba94993d9148983, type: 3}
+  - {fileID: 6881750370916773083, guid: 510e9d5de3fe9c54eba94993d9148983, type: 3}
+  timeBtwStages: 5
+  buyPrice: 10
+  sellPrice: 15
+  icon: {fileID: -8344284950600746447, guid: 510e9d5de3fe9c54eba94993d9148983, type: 3}

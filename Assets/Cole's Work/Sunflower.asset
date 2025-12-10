@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c43fcc5a83970649b21fc78ca0984f6, type: 3}
   m_Name: Sunflower
   m_EditorClassIdentifier: Assembly-CSharp::PlantObject
-  plant: {fileID: 0}
-  nameTxt: {fileID: 0}
-  priceTxt: {fileID: 0}
-  icon: {fileID: 0}
-  btnImage: {fileID: 0}
-  btnTxt: {fileID: 0}
+  plantName: 
+  plantStages:
+  - {fileID: -596773373364728228, guid: 510e9d5de3fe9c54eba94993d9148983, type: 3}
+  - {fileID: -7042374689226477266, guid: 510e9d5de3fe9c54eba94993d9148983, type: 3}
+  - {fileID: 7530643719807144909, guid: 510e9d5de3fe9c54eba94993d9148983, type: 3}
+  - {fileID: 6274847180039180657, guid: 510e9d5de3fe9c54eba94993d9148983, type: 3}
+  timeBtwStages: 20
+  buyPrice: 40
+  sellPrice: 50
+  icon: {fileID: 3910405501714380444, guid: 510e9d5de3fe9c54eba94993d9148983, type: 3}

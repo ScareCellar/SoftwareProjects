@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: Tomato
   m_EditorClassIdentifier: Assembly-CSharp::PlantObject
   plantName: 
-  plantStages: []
-  timeBtwStages: 0
-  buyPrice: 0
-  sellPrice: 0
-  icon: {fileID: 0}
+  plantStages:
+  - {fileID: -3780498461408796120, guid: 510e9d5de3fe9c54eba94993d9148983, type: 3}
+  - {fileID: -5827874292771562073, guid: 510e9d5de3fe9c54eba94993d9148983, type: 3}
+  - {fileID: 2402415582554515247, guid: 510e9d5de3fe9c54eba94993d9148983, type: 3}
+  - {fileID: 8304950708062100032, guid: 510e9d5de3fe9c54eba94993d9148983, type: 3}
+  timeBtwStages: 30
+  buyPrice: 60
+  sellPrice: 70
+  icon: {fileID: -1322868838983756743, guid: 510e9d5de3fe9c54eba94993d9148983, type: 3}

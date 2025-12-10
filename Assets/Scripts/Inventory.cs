@@ -11,7 +11,7 @@ namespace RealAssets.InventorySystem
         [SerializeField] private InventorySlot[] slots; // 6 slots for now
 
         [Header("Items Database")]
-        [SerializeField] private Item[] itemsDatabase; // One right now for testing
+        [SerializeField] private PlantObject[] plantsDB;
 
         private void Awake()
         {
@@ -61,13 +61,25 @@ namespace RealAssets.InventorySystem
         public void RandomItemToInventory()
         {
             // For testing purposes only
-            Item randomItem = itemsDatabase[Random.Range(0, itemsDatabase.Length)];
+            PlantObject randomItem = plantsDB[Random.Range(0, plantsDB.Length)];
             foreach (InventorySlot slot in slots)
             {
                 if (slot.CurrentItem == null)
                 {
                     Debug.Log("Adding random item to inventory");
                     slot.AddItem(randomItem);
+                    break;
+                }
+            }
+        }
+
+        public void AddItem(PlantObject itemToAdd)
+        {
+            foreach (InventorySlot slot in slots)
+            {
+                if (slot.CurrentItem == null)
+                {
+                    slot.AddItem(itemToAdd);
                     break;
                 }
             }

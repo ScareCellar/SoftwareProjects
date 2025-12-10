@@ -76,7 +76,6 @@ namespace RealAssets.UpgradeSystem
             }
         }
 
-        [System.Obsolete]
         private void ApplyUpgradeEffects()
         {
             // TODO: Implement specific upgrade effects based on upgradeType

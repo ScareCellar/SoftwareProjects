@@ -7,8 +7,8 @@ public class FarmManager : MonoBehaviour
 {
     public PlantItem selectPlant;
     public bool isPlanting = false;
-    public int money=100;
-    public Text moneyTxt;
+    // public int money=100;
+    // public Text moneyTxt;
 
     public Color buyColor = Color.green;
     public Color cancelColor = Color.red;
@@ -17,7 +17,7 @@ public class FarmManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        moneyTxt.text = "$" + money;
+        // moneyTxt.text = "$" + money;
     }
 
     public void SelectPlant(PlantItem newPlant)
@@ -44,10 +44,10 @@ public class FarmManager : MonoBehaviour
         }
     }
 
-    public void Transaction(int value)
-    {
-        money += value;
-        moneyTxt.text = "$" + money;
-    }
+    // public void Transaction(int value)
+    // {
+    //     money += value;
+    //     moneyTxt.text = "$" + money;
+    // }
 
 }

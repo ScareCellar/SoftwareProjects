@@ -36,6 +36,11 @@ namespace RealAssets.CurrencySystem
             return false;
         }
 
+        public int GetCurrentMoney()
+        {
+            return currentMoney;
+        }
+
         private void UpdateMoneyUI()
         {
             if (moneyText != null)

@@ -11,6 +11,11 @@ public class PlotManager : MonoBehaviour
     SpriteRenderer plant;
     BoxCollider2D plantCollider;
 
+    public AudioClip plantingClip;
+    public AudioClip harvestingClip;
+    private AudioSource planting;
+    public AudioSource harvesting;
+
     int plantStage = 0;
     float timer;
 
@@ -24,6 +29,8 @@ public class PlotManager : MonoBehaviour
     PlantObject selectedPlant;
 
     FarmManager fm;
+
+    public AudioSource Planting { get => planting; set => planting = value; }
 
     // Start is called before the first frame update
     void Start()
@@ -59,11 +66,13 @@ public class PlotManager : MonoBehaviour
             {
                 GivePlayerSeed(selectedPlant);
                 Harvest();
+                harvesting.Play();
             }
         }
         else if(fm.isPlanting)
         {
             Plant(fm.selectPlant.plant);
+            Planting.Play();
         }
 
     }
